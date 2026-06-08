@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taylor &amp; Co. • Healthcare Marketing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@300;400;500;600&amp;display=swap">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@300;400;500;600&amp;display=swap');
+        
+        :root {
+            --cream: #F5F0E6;
+            --warm-orange: #C35E3B;
+            --deep-char: #2F2723;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        .section-header {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+
+        .warm-orange {
+            color: #C35E3B;
+        }
+
+        .warm-orange-bg {
+            background-color: #C35E3B;
+        }
+
+        .cream-bg {
+            background-color: #F5F0E6;
+        }
+
+        .soft-cream {
+            background-color: #EDE7D9;
+        }
+
+        .deep-char {
+            color: #2F2723;
+        }
+
+        .premium-shadow {
+            box-shadow: 0 10px 30px -15px rgb(0 0 0 / 0.08), 
+                       0 4px 6px -1px rgb(0 0 0 / 0.05);
+        }
+
+        .cinematic-shadow {
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15),
+                       0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+
+        .elegant-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .elegant-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.06), 
+                       0 8px 10px -6px rgb(0 0 0 / 0.04);
+        }
+
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #C35E3B;
+        }
+
+        .orange-glow {
+            text-shadow: 0 0 40px rgba(195, 94, 59, 0.18),
+                        0 2px 4px rgba(0, 0, 0, 0.06);
+        }
+
+        .subtle-divider {
+            border-color: #D9D0C2;
+        }
+
+        .portfolio-img {
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .portfolio-card:hover .portfolio-img {
+            transform: scale(1.035);
+        }
+
+        .nav-scrolled {
+            background-color: rgba(245, 240, 230, 0.96);
+            backdrop-filter: blur(12px);
+        }
+
+        .step-number {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .premium-button {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .premium-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 15px -3px rgb(195 94 59 / 0.2),
+                       0 4px 6px -4px rgb(195 94 59 / 0.2);
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .modal {
+            animation: modalPop 0.2s ease-out forwards;
+        }
+
+        @keyframes modalPop {
+            from {
+                opacity: 0;
+                transform: translateY(10px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .line-art {
+            stroke: #C35E3B;
+            stroke-width: 1.75;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+        .hero-bg {
+            background: linear-gradient(180deg, #F5F0E6 0%, #F1EBDE 100%);
+        }
+
+        .refined-text {
+            line-height: 1.65;
+        }
+    </style>
+</head>
+<body class="cream-bg text-[#2F2723] antialiased">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#F5F0E6]/90 backdrop-blur-lg border-b border-[#D9D0C2]/60">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo + Brand -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <!-- Elegant T monogram with growth arc -->
+                            <path d="M14 14 H34" class="line-art" stroke="#C35E3B"/>
+                            <path d="M24 14 V34" class="line-art" stroke="#C35E3B"/>
+                            <!-- Subtle arc representing connection & growth -->
+                            <path d="M12 30 Q24 38 36 30" class="line-art" stroke="#C35E3B"/>
+                            <circle cx="24" cy="34" r="2.5" class="line-art" stroke="#C35E3B"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-semibold tracking-tighter text-xl" style="font-family: 'Playfair Display', Georgia, serif;">Taylor</span>
+                        <span class="font-light tracking-[1.5px] text-lg ml-0.5 text-[#C35E3B]">&amp; Co.</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-x-10 text-sm font-medium tracking-wide">
+                    <a href="#about" class="nav-link text-[#2F2723]/80 hover:text-[#C35E3B]">Our Approach</a>
+                    <a href="#services" class="nav-link text-[#2F2723]/80 hover:text-[#C35E3B]">Services</a>
+                    <a href="#portfolio" class="nav-link text-[#2F2723]/80 hover:text-[#C35E3B]">Work</a>
+                    <a href="#process" class="nav-link text-[#2F2723]/80 hover:text-[#C35E3B]">Process</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="#contact" 
+                       class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold tracking-wider rounded-full border border-[#C35E3B] text-[#C35E3B] hover:bg-[#C35E3B] hover:text-white transition-all duration-200">
+                        REQUEST CONSULTATION
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button"
+                        class="md:hidden w-10 h-10 flex items-center justify-center text-[#2F2723]"
+                        aria-label="Toggle menu">
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-[#D9D0C2]/70 bg-[#F5F0E6]">
+            <div class="px-8 py-8 flex flex-col gap-y-5 text-base font-medium">
+                <a href="#about" class="mobile-nav-link py-1">Our Approach</a>
+                <a href="#services" class="mobile-nav-link py-1">Services</a>
+                <a href="#portfolio" class="mobile-nav-link py-1">Work</a>
+                <a href="#process" class="mobile-nav-link py-1">Process</a>
+                <div class="pt-4 border-t border-[#D9D0C2]/60">
+                    <a href="#contact" 
+                       class="mobile-nav-link inline-block w-full text-center py-3.5 rounded-full border border-[#C35E3B] text-[#C35E3B] font-semibold tracking-wider">
+                        REQUEST CONSULTATION
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-[100dvh] pt-20 flex items-center relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-8 pt-12 pb-16 md:pt-8 md:pb-24">
+            <div class="max-w-4xl mx-auto text-center">
+                
+                <!-- Logo -->
+                <div class="flex justify-center mb-8 md:mb-9">
+                    <div class="w-20 h-20 md:w-24 md:h-24 p-3 bg-white/70 rounded-2xl shadow-sm border border-[#D9D0C2]/60">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <!-- Elegant T monogram with growth arc -->
+                            <path d="M12 13 H36" class="line-art" stroke="#C35E3B" stroke-width="2.2"/>
+                            <path d="M24 13 V35" class="line-art" stroke="#C35E3B" stroke-width="2.2"/>
+                            <!-- Subtle arc representing connection, trust & growth -->
+                            <path d="M10 29 Q24 40 38 29" class="line-art" stroke="#C35E3B" stroke-width="2"/>
+                            <circle cx="24" cy="35" r="3" class="line-art" stroke="#C35E3B" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="heading-serif text-6xl md:text-7xl lg:text-[82px] leading-[0.92] tracking-tighter warm-orange orange-glow mb-5">
+                    Taylor &amp; Co.
+                </h1>
+
+                <!-- Tagline -->
+                <p class="max-w-lg mx-auto text-xl md:text-2xl text-[#2F2723]/75 tracking-tight mb-10">
+                    Strategic marketing for healthcare practices.
+                </p>
+
+                <!-- CTAs -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#portfolio" 
+                       class="premium-button w-full sm:w-auto inline-flex items-center justify-center px-9 py-[17px] text-sm font-semibold tracking-[1px] bg-[#C35E3B] text-white rounded-full hover:bg-[#A84C2E]">
+                        VIEW OUR WORK
+                    </a>
+                    <a href="#contact" 
+                       class="premium-button w-full sm:w-auto inline-flex items-center justify-center px-9 py-[17px] text-sm font-semibold tracking-[1px] border border-[#C35E3B]/90 text-[#C35E3B] rounded-full hover:bg-white/70">
+                        REQUEST A CONSULTATION
+                    </a>
+                </div>
+
+                <div class="mt-12 md:mt-16 flex justify-center">
+                    <div class="flex items-center gap-x-2 text-xs tracking-[1.5px] text-[#2F2723]/50">
+                        <div class="h-px w-6 bg-[#C35E3B]/30"></div>
+                        <span>ESTABLISHED 2026 • RICHMOND, VIRGINIA</span>
+                        <div class="h-px w-6 bg-[#C35E3B]/30"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subtle bottom fade -->
+        <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#F5F0E6] to-transparent pointer-events-none"></div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="border-b border-[#D9D0C2]/70 bg-white/40">
+        <div class="max-w-6xl mx-auto px-8">
+            <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-3 py-5 text-xs tracking-[1px] text-[#2F2723]/50 font-medium">
+                <div>PRIVATE PRACTICES</div>
+                <div class="hidden sm:block w-px h-3 bg-[#D9D0C2]"></div>
+                <div>SPECIALTY CLINICS</div>
+                <div class="hidden sm:block w-px h-3 bg-[#D9D0C2]"></div>
+                <div>MEDICAL GROUPS</div>
+                <div class="hidden sm:block w-px h-3 bg-[#D9D0C2]"></div>
+                <div>HEALTH SYSTEMS</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="max-w-5xl mx-auto px-8 pt-20 pb-16 md:pt-24 md:pb-20">
+        <div class="grid md:grid-cols-12 gap-x-12 gap-y-10 items-center">
+            <div class="md:col-span-7">
+                <div class="uppercase tracking-[2px] text-xs font-medium text-[#C35E3B] mb-3">Our Approach</div>
+                <h2 class="section-header text-5xl md:text-[54px] leading-[0.96] tracking-tighter mb-8">
+                    Marketing that<br>builds trust.
+                </h2>
+                
+                <div class="refined-text text-[15px] leading-relaxed text-[#2F2723]/80 space-y-5 max-w-[44ch]">
+                    <p>Founded in 2026 by Stephanie Taylor, Taylor &amp; Co. partners with healthcare providers and private practices ready to grow with clarity and integrity. We believe the most effective marketing feels like an extension of exceptional patient care—thoughtful, human, and rooted in trust.</p>
+                    <p>We work exclusively with healthcare organizations because we understand the unique responsibility of communicating in a regulated, high-stakes field. Our work helps practices attract the right patients, strengthen their reputation, and build sustainable growth without compromising their values.</p>
+                </div>
+            </div>
+
+            <div class="md:col-span-5">
+                <div class="soft-cream rounded-3xl p-9 md:p-10 premium-shadow">
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <div class="stat-number text-5xl font-bold warm-orange tracking-tighter">2026</div>
+                            <div class="mt-1 text-sm tracking-wide text-[#2F2723]/60">Founded in<br>Richmond, Virginia</div>
+                        </div>
+                        <div>
+                            <div class="stat-number text-5xl font-bold warm-orange tracking-tighter">28</div>
+                            <div class="mt-1 text-sm tracking-wide text-[#2F2723]/60">Healthcare practices<br>guided since opening</div>
+                        </div>
+                        <div>
+                            <div class="stat-number text-5xl font-bold warm-orange tracking-tighter">3</div>
+                            <div class="mt-1 text-sm tracking-wide text-[#2F2723]/60">Specialized focus<br>areas in healthcare</div>
+                        </div>
+                        <div>
+                            <div class="stat-number text-5xl font-bold warm-orange tracking-tighter">9</div>
+                            <div class="mt-1 text-sm tracking-wide text-[#2F2723]/60">States with active<br>client practices</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="border-t border-[#D9D0C2]/70 bg-white/30">
+        <div class="max-w-6xl mx-auto px-8 py-20 md:py-24">
+            <div class="flex flex-col items-center text-center mb-14">
+                <div class="uppercase text-[#C35E3B] tracking-[2.5px] text-xs font-medium mb-3">What We Offer</div>
+                <h2 class="section-header text-5xl md:text-[52px] leading-none tracking-tighter">Services</h2>
+                <p class="mt-4 max-w-md text-[#2F2723]/70 text-[15px]">Every engagement is approached with the precision, ethics, and patient-first mindset that healthcare marketing demands.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Service 1 -->
+                <div class="elegant-card group bg-white border border-[#D9D0C2]/70 rounded-3xl px-8 py-9">
+                    <div class="w-9 h-9 mb-6 text-[#C35E3B]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8-3v3m0 3v3m0 0h-7.5" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-xl tracking-tight mb-3">Brand Strategy &amp; Positioning</h3>
+                    <p class="text-[#2F2723]/70 leading-relaxed text-[15px]">We help healthcare practices define a clear, differentiated brand voice that builds immediate trust with patients and referring providers while remaining fully compliant.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="elegant-card group bg-white border border-[#D9D0C2]/70 rounded-3xl px-8 py-9">
+                    <div class="w-9 h-9 mb-6 text-[#C35E3B]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-xl tracking-tight mb-3">Patient Acquisition Strategy</h3>
+                    <p class="text-[#2F2723]/70 leading-relaxed text-[15px]">Ethical, high-converting digital marketing systems designed specifically for private practices—Google, SEO, content, and paid campaigns that attract the right patients.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="elegant-card group bg-white border border-[#D9D0C2]/70 rounded-3xl px-8 py-9">
+                    <div class="w-9 h-9 mb-6 text-[#C35E3B]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-xl tracking-tight mb-3">Website &amp; Content Systems</h3>
+                    <p class="text-[#2F2723]/70 leading-relaxed text-[15px]">We design and optimize practice websites and content that convert visitors into patients while clearly communicating expertise, compassion, and clinical excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Featured Work -->
+    <section id="portfolio" class="max-w-7xl mx-auto px-8 pt-6 pb-20 md:pt-8 md:pb-24">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-y-4 mb-9">
+            <div>
+                <div class="uppercase tracking-[2px] text-xs font-medium text-[#C35E3B] mb-1.5">Featured Work</div>
+                <h2 class="section-header text-5xl md:text-6xl leading-none tracking-tighter">Client Results</h2>
+            </div>
+            <a href="#contact" class="inline-flex items-center gap-x-2 text-sm font-medium text-[#C35E3B] group">
+                DISCUSS YOUR PRACTICE 
+                <span class="group-hover:translate-x-0.5 transition">→</span>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Portfolio Item 1 -->
+            <div onclick="showPortfolioModal(0)" class="portfolio-card group cursor-pointer bg-white overflow-hidden rounded-3xl border border-[#D9D0C2]/60 premium-shadow">
+                <div class="aspect-[4/3] overflow-hidden bg-[#EDE7D9]">
+                    <img src="https://picsum.photos/id/1011/800/600" alt="Riverside Women's Health patient growth" 
+                         class="portfolio-img w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-baseline justify-between">
+                        <div>
+                            <div class="font-semibold tracking-tight text-lg">Riverside Women's Health</div>
+                            <div class="text-sm text-[#2F2723]/60">+62% new patient bookings</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 inline-flex items-center text-xs px-3 py-1 rounded-full bg-[#F5F0E6] text-[#C35E3B] tracking-wider">COMPLETED 2026</div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 2 -->
+            <div onclick="showPortfolioModal(1)" class="portfolio-card group cursor-pointer bg-white overflow-hidden rounded-3xl border border-[#D9D0C2]/60 premium-shadow">
+                <div class="aspect-[4/3] overflow-hidden bg-[#EDE7D9]">
+                    <img src="https://picsum.photos/id/1005/800/600" alt="Summit Orthopedics brand and growth" 
+                         class="portfolio-img w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-baseline justify-between">
+                        <div>
+                            <div class="font-semibold tracking-tight text-lg">Summit Orthopedics</div>
+                            <div class="text-sm text-[#2F2723]/60">+41% surgical consultations</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 inline-flex items-center text-xs px-3 py-1 rounded-full bg-[#F5F0E6] text-[#C35E3B] tracking-wider">COMPLETED 2026</div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 3 -->
+            <div onclick="showPortfolioModal(2)" class="portfolio-card group cursor-pointer bg-white overflow-hidden rounded-3xl border border-[#D9D0C2]/60 premium-shadow">
+                <div class="aspect-[4/3] overflow-hidden bg-[#EDE7D9]">
+                    <img src="https://picsum.photos/id/160/800/600" alt="Coastal Family Medicine rebrand" 
+                         class="portfolio-img w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-baseline justify-between">
+                        <div>
+                            <div class="font-semibold tracking-tight text-lg">Coastal Family Medicine</div>
+                            <div class="text-sm text-[#2F2723]/60">Full brand + website relaunch</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 inline-flex items-center text-xs px-3 py-1 rounded-full bg-[#F5F0E6] text-[#C35E3B] tracking-wider">COMPLETED 2026</div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 4 -->
+            <div onclick="showPortfolioModal(3)" class="portfolio-card group cursor-pointer bg-white overflow-hidden rounded-3xl border border-[#D9D0C2]/60 premium-shadow">
+                <div class="aspect-[4/3] overflow-hidden bg-[#EDE7D9]">
+                    <img src="https://picsum.photos/id/201/800/600" alt="Piedmont Neurology patient acquisition" 
+                         class="portfolio-img w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-baseline justify-between">
+                        <div>
+                            <div class="font-semibold tracking-tight text-lg">Piedmont Neurology</div>
+                            <div class="text-sm text-[#2F2723]/60">+55% new patient inquiries</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 inline-flex items-center text-xs px-3 py-1 rounded-full bg-[#F5F0E6] text-[#C35E3B] tracking-wider">COMPLETED 2026</div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 5 -->
+            <div onclick="showPortfolioModal(4)" class="portfolio-card group cursor-pointer bg-white overflow-hidden rounded-3xl border border-[#D9D0C2]/60 premium-shadow">
+                <div class="aspect-[4/3] overflow-hidden bg-[#EDE7D9]">
+                    <img src="https://picsum.photos/id/106/800/600" alt="Harborview Behavioral Health" 
+                         class="portfolio-img w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-baseline justify-between">
+                        <div>
+                            <div class="font-semibold tracking-tight text-lg">Harborview Behavioral Health</div>
+                            <div class="text-sm text-[#2F2723]/60">Multi-location growth strategy</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 inline-flex items-center text-xs px-3 py-1 rounded-full bg-[#F5F0E6] text-[#C35E3B] tracking-wider">COMPLETED 2026</div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 6 -->
+            <div onclick="showPortfolioModal(5)" class="portfolio-card group cursor-pointer bg-white overflow-hidden rounded-3xl border border-[#D9D0C2]/60 premium-shadow">
+                <div class="aspect-[4/3] overflow-hidden bg-[#EDE7D9]">
+                    <img src="https://picsum.photos/id/251/800/600" alt="Virginia Heart &amp; Vascular Institute" 
+                         class="portfolio-img w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-baseline justify-between">
+                        <div>
+                            <div class="font-semibold tracking-tight text-lg">Virginia Heart &amp; Vascular</div>
+                            <div class="text-sm text-[#2F2723]/60">+38% referral volume</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 inline-flex items-center text-xs px-3 py-1 rounded-full bg-[#F5F0E6] text-[#C35E3B] tracking-wider">COMPLETED 2026</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="bg-white border-y border-[#D9D0C2]/70">
+        <div class="max-w-6xl mx-auto px-8 py-20 md:py-24">
+            <div class="text-center mb-14">
+                <div class="uppercase tracking-[2px] text-xs font-medium text-[#C35E3B] mb-2">How We Work</div>
+                <h2 class="section-header text-5xl md:text-[52px] leading-none tracking-tighter">The engagement process</h2>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-5 gap-6">
+                    <!-- Step 1 -->
+                    <div class="flex md:block gap-6 md:text-center">
+                        <div class="flex-shrink-0 md:mx-auto">
+                            <div class="step-number w-12 h-12 rounded-2xl flex items-center justify-center text-3xl font-bold border border-[#C35E3B]/20 text-[#C35E3B]">01</div>
+                        </div>
+                        <div class="pt-1 md:pt-5">
+                            <div class="font-semibold text-lg tracking-tight">Discovery</div>
+                            <p class="mt-1 text-sm text-[#2F2723]/70 leading-snug">Deep-dive conversation about your practice goals, current marketing, patient mix, and competitive landscape.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex md:block gap-6 md:text-center">
+                        <div class="flex-shrink-0 md:mx-auto">
+                            <div class="step-number w-12 h-12 rounded-2xl flex items-center justify-center text-3xl font-bold border border-[#C35E3B]/20 text-[#C35E3B]">02</div>
+                        </div>
+                        <div class="pt-1 md:pt-5">
+                            <div class="font-semibold text-lg tracking-tight">Audit &amp; Insight</div>
+                            <p class="mt-1 text-sm text-[#2F2723]/70 leading-snug">Comprehensive review of your digital presence, messaging, and patient journey with data-backed recommendations.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex md:block gap-6 md:text-center">
+                        <div class="flex-shrink-0 md:mx-auto">
+                            <div class="step-number w-12 h-12 rounded-2xl flex items-center justify-center text-3xl font-bold border border-[#C35E3B]/20 text-[#C35E3B]">03</div>
+                        </div>
+                        <div class="pt-1 md:pt-5">
+                            <div class="font-semibold text-lg tracking-tight">Strategy</div>
+                            <p class="mt-1 text-sm text-[#2F2723]/70 leading-snug">Custom roadmap with clear priorities, messaging frameworks, and measurable growth objectives tailored to healthcare.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="flex md:block gap-6 md:text-center">
+                        <div class="flex-shrink-0 md:mx-auto">
+                            <div class="step-number w-12 h-12 rounded-2xl flex items-center justify-center text-3xl font-bold border border-[#C35E3B]/20 text-[#C35E3B]">04</div>
+                        </div>
+                        <div class="pt-1 md:pt-5">
+                            <div class="font-semibold text-lg tracking-tight">Implementation</div>
+                            <p class="mt-1 text-sm text-[#2F2723]/70 leading-snug">Hands-on execution of brand, website, content, and acquisition initiatives with close collaboration and iteration.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 5 -->
+                    <div class="flex md:block gap-6 md:text-center">
+                        <div class="flex-shrink-0 md:mx-auto">
+                            <div class="step-number w-12 h-12 rounded-2xl flex items-center justify-center text-3xl font-bold border border-[#C35E3B]/20 text-[#C35E3B]">05</div>
+                        </div>
+                        <div class="pt-1 md:pt-5">
+                            <div class="font-semibold text-lg tracking-tight">Partnership</div>
+                            <p class="mt-1 text-sm text-[#2F2723]/70 leading-snug">Ongoing optimization, performance reporting, and strategic guidance so your practice continues to grow with confidence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="max-w-6xl mx-auto px-8 py-20 md:py-24">
+        <div class="mb-12">
+            <div class="uppercase tracking-[2px] text-xs font-medium text-[#C35E3B] mb-2">Client Voices</div>
+            <h2 class="section-header text-5xl md:text-[52px] leading-none tracking-tighter">What our clients say</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="soft-cream rounded-3xl p-9 premium-shadow">
+                <div class="text-[#C35E3B] text-4xl leading-none mb-6">“</div>
+                <p class="refined-text text-[15px] leading-relaxed">Stephanie and her team transformed how we show up online. The new brand and website finally reflect the level of care we provide. Our new patient volume has grown steadily and the quality of inquiries is markedly higher.</p>
+                <div class="mt-8 flex items-center gap-x-3">
+                    <div class="font-medium">Dr. Priya Malhotra</div>
+                    <div class="text-sm text-[#2F2723]/50">— Riverside Women's Health</div>
+                </div>
+            </div>
+
+            <div class="soft-cream rounded-3xl p-9 premium-shadow">
+                <div class="text-[#C35E3B] text-4xl leading-none mb-6">“</div>
+                <p class="refined-text text-[15px] leading-relaxed">Working with Taylor &amp; Co. gave us a clear strategy instead of scattered tactics. Their understanding of orthopedic marketing and patient decision-making helped us grow surgical consultations in a very competitive market.</p>
+                <div class="mt-8 flex items-center gap-x-3">
+                    <div class="font-medium">Dr. Michael Bennett</div>
+                    <div class="text-sm text-[#2F2723]/50">— Summit Orthopedics</div>
+                </div>
+            </div>
+
+            <div class="soft-cream rounded-3xl p-9 premium-shadow">
+                <div class="text-[#C35E3B] text-4xl leading-none mb-6">“</div>
+                <p class="refined-text text-[15px] leading-relaxed">They took the time to truly understand our values as a family medicine practice. The website and messaging feel authentic to who we are. We’re now attracting the kind of patients we love taking care of.</p>
+                <div class="mt-8 flex items-center gap-x-3">
+                    <div class="font-medium">Dr. Sarah Ellison</div>
+                    <div class="text-sm text-[#2F2723]/50">— Coastal Family Medicine</div>
+                </div>
+            </div>
+
+            <div class="soft-cream rounded-3xl p-9 premium-shadow">
+                <div class="text-[#C35E3B] text-4xl leading-none mb-6">“</div>
+                <p class="refined-text text-[15px] leading-relaxed">Taylor &amp; Co. helped us build a thoughtful, compliant system for attracting the right patients. The results have been consistent and sustainable. I recommend them without hesitation to other specialty practices.</p>
+                <div class="mt-8 flex items-center gap-x-3">
+                    <div class="font-medium">Dr. James Whitaker</div>
+                    <div class="text-sm text-[#2F2723]/50">— Piedmont Neurology</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="border-t border-[#D9D0C2]/70 bg-white/40">
+        <div class="max-w-6xl mx-auto px-8 py-20 md:py-24">
+            <div class="grid lg:grid-cols-5 gap-x-12 gap-y-14">
+                
+                <!-- Left Column -->
+                <div class="lg:col-span-2">
+                    <div class="uppercase tracking-[2px] text-xs font-medium text-[#C35E3B] mb-3">Begin Your Growth Strategy</div>
+                    <h2 class="section-header text-5xl md:text-[52px] leading-[0.96] tracking-tighter mb-6">Let’s discuss<br>your practice.</h2>
+                    
+                    <div class="space-y-8 text-[15px]">
+                        <div>
+                            <div class="font-medium tracking-wide text-sm mb-1 text-[#2F2723]/70">THE STUDIO</div>
+                            <div class="leading-tight">1425 Heritage Lane<br>Richmond, Virginia 23220</div>
+                        </div>
+                        <div>
+                            <div class="font-medium tracking-wide text-sm mb-1 text-[#2F2723]/70">CONTACT</div>
+                            <a href="tel:8045550192" class="block hover:text-[#C35E3B] transition-colors">(804) 555-0192</a>
+                            <a href="mailto:hello@taylorandco.com" class="block hover:text-[#C35E3B] transition-colors">hello@taylorandco.com</a>
+                        </div>
+                        <div>
+                            <div class="font-medium tracking-wide text-sm mb-1 text-[#2F2723]/70">HOURS</div>
+                            <div class="leading-tight text-[#2F2723]/80">Monday – Thursday, 9am – 5pm<br>By appointment only</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="lg:col-span-3">
+                    <form id="consultation-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs tracking-wider font-medium text-[#2F2723]/70 mb-1.5">YOUR NAME</label>
+                                <input type="text" id="name" required
+                                       class="w-full bg-white border border-[#D9D0C2] rounded-2xl px-5 py-3.5 text-sm focus:outline-none focus:border-[#C35E3B]/70 placeholder:text-[#2F2723]/40">
+                            </div>
+                            <div>
+                                <label class="block text-xs tracking-wider font-medium text-[#2F2723]/70 mb-1.5">PRACTICE NAME</label>
+                                <input type="text" id="practice" required
+                                       class="w-full bg-white border border-[#D9D0C2] rounded-2xl px-5 py-3.5 text-sm focus:outline-none focus:border-[#C35E3B]/70 placeholder:text-[#2F2723]/40">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs tracking-wider font-medium text-[#2F2723]/70 mb-1.5">EMAIL</label>
+                                <input type="email" id="email" required
+                                       class="w-full bg-white border border-[#D9D0C2] rounded-2xl px-5 py-3.5 text-sm focus:outline-none focus:border-[#C35E3B]/70 placeholder:text-[#2F2723]/40">
+                            </div>
+                            <div>
+                                <label class="block text-xs tracking-wider font-medium text-[#2F2723]/70 mb-1.5">TYPE OF PRACTICE</label>
+                                <select id="practice-type"
+                                        class="w-full bg-white border border-[#D9D0C2] rounded-2xl px-5 py-[15px] text-sm focus:outline-none focus:border-[#C35E3B]/70">
+                                    <option value="">Select type...</option>
+                                    <option value="Primary Care">Primary Care / Family Medicine</option>
+                                    <option value="Specialty">Medical Specialty</option>
+                                    <option value="Surgical">Surgical Practice</option>
+                                    <option value="Behavioral Health">Behavioral / Mental Health</option>
+                                    <option value="Multi-Location">Multi-Location Group</option>
+                                    <option value="Other">Other Healthcare Organization</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs tracking-wider font-medium text-[#2F2723]/70 mb-1.5">WHAT ARE YOU HOPING TO ACHIEVE?</label>
+                            <textarea id="message" rows="4" required placeholder="Tell us about your current challenges, growth goals, or marketing needs..."
+                                      class="w-full resize-y bg-white border border-[#D9D0C2] rounded-3xl px-5 py-4 text-sm focus:outline-none focus:border-[#C35E3B]/70 placeholder:text-[#2F2723]/40"></textarea>
+                        </div>
+
+                        <button type="submit"
+                                class="premium-button mt-2 w-full sm:w-auto inline-flex items-center justify-center gap-x-2 bg-[#C35E3B] hover:bg-[#A84C2E] transition-colors text-white px-10 py-4 rounded-2xl text-sm font-semibold tracking-wider">
+                            SUBMIT CONSULTATION REQUEST
+                        </button>
+                        <p class="text-xs text-[#2F2723]/50 mt-1.5">We typically respond within two business days.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#D9D0C2]/70 py-8">
+        <div class="max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-y-3 text-xs tracking-wide text-[#2F2723]/60">
+            <div>© <span id="current-year"></span> Taylor &amp; Co. All rights reserved.</div>
+            <div class="flex gap-x-5">
+                <span>Privacy</span>
+                <span>Our Approach</span>
+                <span>LinkedIn</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolio-modal" onclick="hidePortfolioModal()" class="hidden fixed inset-0 z-[80] bg-black/70 flex items-center justify-center p-4 md:p-8">
+        <div onclick="event.stopImmediatePropagation()" class="modal max-w-4xl w-full bg-[#F5F0E6] rounded-3xl overflow-hidden shadow-2xl">
+            <div class="relative">
+                <button onclick="hidePortfolioModal()" 
+                        class="absolute top-5 right-5 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-white/90 hover:bg-white text-[#2F2723] transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6h12v12" />
+                    </svg>
+                </button>
+                
+                <div id="modal-image-container" class="aspect-video md:aspect-[16/9.5] bg-[#EDE7D9]">
+                    <!-- Image injected via JS -->
+                </div>
+                
+                <div class="p-8 md:p-10">
+                    <div id="modal-meta" class="flex items-center gap-3 mb-2"></div>
+                    <h3 id="modal-title" class="section-header text-3xl md:text-[34px] leading-none tracking-tight mb-3"></h3>
+                    <p id="modal-description" class="text-[#2F2723]/75 max-w-prose refined-text"></p>
+                    
+                    <div class="mt-7 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                        <div>
+                            <div class="text-xs text-[#2F2723]/50 tracking-wider">SPECIALTY</div>
+                            <div id="modal-era" class="font-medium mt-px"></div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-[#2F2723]/50 tracking-wider">LOCATION</div>
+                            <div id="modal-provenance" class="font-medium mt-px"></div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-[#2F2723]/50 tracking-wider">ENGAGEMENT</div>
+                            <div id="modal-completed" class="font-medium mt-px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" onclick="hideSuccessModal()" class="hidden fixed inset-0 z-[90] bg-black/70 flex items-center justify-center p-6">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-white rounded-3xl max-w-md w-full p-9 text-center">
+            <div class="mx-auto w-14 h-14 rounded-full bg-[#C35E3B]/10 flex items-center justify-center mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#C35E3B]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                </svg>
+            </div>
+            <h3 class="text-2xl tracking-tight font-semibold mb-2">Thank you.</h3>
+            <p class="text-[#2F2723]/75">Your strategy conversation request has been received. Stephanie or a member of the team will contact you within two business days.</p>
+            
+            <button onclick="hideSuccessModal()" 
+                    class="mt-8 w-full py-3.5 rounded-2xl border border-[#C35E3B] text-sm font-semibold tracking-widest text-[#C35E3B]">
+                CLOSE
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind script configuration
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--warm-orange', '#C35E3B');
+            
+            // Optional: Extend colors if needed in future
+            // The CDN version is already loaded. We can dynamically add classes if desired.
+        }
+
+        // Navbar scroll effect
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('nav-scrolled', 'shadow-sm');
+                } else {
+                    navbar.classList.remove('nav-scrolled', 'shadow-sm');
+                }
+            });
+        }
+
+        // Mobile menu
+        function initMobileMenu() {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            button.addEventListener('click', () => {
+                const isHidden = menu.classList.contains('hidden');
+                
+                if (isHidden) {
+                    menu.classList.remove('hidden');
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+                } else {
+                    menu.classList.add('hidden');
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+                }
+            });
+
+            // Close mobile menu when clicking a nav link
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+                });
+            });
+        }
+
+        // Smooth scroll for all anchor links
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        const offset = 80;
+                        const bodyRect = document.body.getBoundingClientRect().top;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition - bodyRect - offset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Portfolio data
+        const portfolioData = [
+            {
+                title: "Riverside Women's Health",
+                era: "Specialty OB/GYN Practice",
+                provenance: "Richmond, Virginia",
+                completed: "Spring 2026",
+                description: "A well-established women's health practice was experiencing stagnant patient growth despite strong clinical outcomes. We developed a comprehensive brand refresh, new patient-focused website, and targeted digital acquisition strategy. Within six months, new patient bookings increased 62% while maintaining the practice's reputation for compassionate, high-quality care.",
+                image: "https://picsum.photos/id/1011/1200/800",
+                thumb: "https://picsum.photos/id/1011/800/600"
+            },
+            {
+                title: "Summit Orthopedics",
+                era: "Multi-Physician Orthopedic Group",
+                provenance: "Virginia Beach, Virginia",
+                completed: "February 2026",
+                description: "Summit Orthopedics needed to increase surgical consultations in a competitive market. We created a clear positioning strategy highlighting their sports medicine expertise and implemented a content + paid campaign system focused on patient education. Surgical consultations rose 41% year-over-year with higher-quality patient leads.",
+                image: "https://picsum.photos/id/1005/1200/800",
+                thumb: "https://picsum.photos/id/1005/800/600"
+            },
+            {
+                title: "Coastal Family Medicine",
+                era: "Independent Primary Care Practice",
+                provenance: "Norfolk, Virginia",
+                completed: "Spring 2026",
+                description: "This beloved family medicine practice had an outdated online presence that no longer reflected their warm, relationship-centered care. We led a full brand and website relaunch with optimized patient journey content. The new digital foundation resulted in a 3x increase in appointment requests from their ideal patient demographic.",
+                image: "https://picsum.photos/id/160/1200/800",
+                thumb: "https://picsum.photos/id/160/800/600"
+            },
+            {
+                title: "Piedmont Neurology",
+                era: "Neurology & Headache Clinic",
+                provenance: "Charlottesville, Virginia",
+                completed: "Winter 2026",
+                description: "Piedmont Neurology wanted to grow their headache and migraine program while attracting appropriate referrals. We built an educational content engine and refined their Google presence and local SEO. New patient inquiries increased 55%, with a noticeable improvement in the quality and fit of incoming cases.",
+                image: "https://picsum.photos/id/201/1200/800",
+                thumb: "https://picsum.photos/id/201/800/600"
+            },
+            {
+                title: "Harborview Behavioral Health",
+                era: "Multi-Location Mental Health Practice",
+                provenance: "Richmond &amp; Fredericksburg, Virginia",
+                completed: "Spring 2026",
+                description: "Harborview needed a cohesive growth strategy across two locations in a sensitive clinical category. We developed unified brand messaging, a new website experience, and compliant patient acquisition channels. The practice saw strong, sustainable growth in new patient starts while protecting clinical capacity and brand integrity.",
+                image: "https://picsum.photos/id/106/1200/800",
+                thumb: "https://picsum.photos/id/106/800/600"
+            },
+            {
+                title: "Virginia Heart &amp; Vascular Institute",
+                era: "Cardiovascular Specialty Practice",
+                provenance: "Richmond, Virginia",
+                completed: "January 2026",
+                description: "This high-performing cardiovascular group sought to increase direct referrals and reduce reliance on hospital channels. We crafted a physician-focused referral strategy alongside a refined patient education platform. Referral volume from independent practices grew 38% while strengthening the institute's reputation as the trusted local leader.",
+                image: "https://picsum.photos/id/251/1200/800",
+                thumb: "https://picsum.photos/id/251/800/600"
+            }
+        ];
+
+        // Show portfolio modal
+        function showPortfolioModal(index) {
+            const data = portfolioData[index];
+            const modal = document.getElementById('portfolio-modal');
+            const container = document.getElementById('modal-image-container');
+            
+            // Inject image
+            container.innerHTML = `
+                <img src="${data.image}" alt="${data.title}" 
+                     class="w-full h-full object-cover">
+            `;
+            
+            // Populate text
+            document.getElementById('modal-title').textContent = data.title;
+            document.getElementById('modal-description').textContent = data.description;
+            document.getElementById('modal-era').textContent = data.era;
+            document.getElementById('modal-provenance').textContent = data.provenance;
+            document.getElementById('modal-completed').textContent = data.completed;
+            
+            // Meta badge
+            const meta = document.getElementById('modal-meta');
+            meta.innerHTML = `<span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium bg-white border border-[#D9D0C2]/70 tracking-wider">FULL CASE STUDY AVAILABLE</span>`;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hidePortfolioModal() {
+            const modal = document.getElementById('portfolio-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Form handling
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            const form = document.getElementById('consultation-form');
+            
+            // Simple validation already handled by HTML5 required attributes.
+            // In a real site this would POST to a backend or service.
+            
+            // Hide form and show success
+            form.reset();
+            hidePortfolioModal(); // in case it's open
+            
+            const successModal = document.getElementById('success-modal');
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideSuccessModal() {
+            const modal = document.getElementById('success-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Set current year in footer
+        function setCurrentYear() {
+            const yearEl = document.getElementById('current-year');
+            yearEl.textContent = new Date().getFullYear();
+        }
+
+        // Keyboard escape support
+        function initKeyboardControls() {
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    const portfolioModal = document.getElementById('portfolio-modal');
+                    const successModal = document.getElementById('success-modal');
+                    
+                    if (!portfolioModal.classList.contains('hidden') && portfolioModal.classList.contains('flex')) {
+                        hidePortfolioModal();
+                    } else if (!successModal.classList.contains('hidden') && successModal.classList.contains('flex')) {
+                        hideSuccessModal();
+                    }
+                }
+            });
+        }
+
+        // Initialize everything
+        function initializeWebsite() {
+            initializeTailwind();
+            initNavbar();
+            initMobileMenu();
+            initSmoothScroll();
+            setCurrentYear();
+            initKeyboardControls();
+            
+            // Optional: Preload a couple of portfolio images for faster modal experience
+            portfolioData.forEach((item, i) => {
+                if (i < 3) {
+                    const img = new Image();
+                    img.src = item.image;
+                }
+            });
+            
+            // Make sure mobile menu closes if user resizes to desktop
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    const menu = document.getElementById('mobile-menu');
+                    const icon = document.getElementById('menu-icon');
+                    menu.classList.add('hidden');
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+                }
+            });
+
+            // Accessibility: allow clicking outside portfolio images in cards if needed (already handled by onclick)
+            console.log('%c[Taylor & Co.] Premium healthcare marketing website initialized.', 'color:#8D7663');
+        }
+
+        // Boot the site
+        window.onload = initializeWebsite;
+    </script>
+</body>
+</html>
