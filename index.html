@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davis Restoration • Fine Furniture Atelier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@300;400;500;600&amp;display=swap">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@300;400;500;600&amp;display=swap');
+        
+        :root {
+            --cream: #F5F0E6;
+            --warm-orange: #C35E3B;
+            --deep-char: #2F2723;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        .section-header {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+
+        .warm-orange {
+            color: #C35E3B;
+        }
+
+        .warm-orange-bg {
+            background-color: #C35E3B;
+        }
+
+        .cream-bg {
+            background-color: #F5F0E6;
+        }
+
+        .soft-cream {
+            background-color: #EDE7D9;
+        }
+
+        .deep-char {
+            color: #2F2723;
+        }
+
+        .premium-shadow {
+            box-shadow: 0 10px 30px -15px rgb(0 0 0 / 0.08), 
+                       0 4px 6px -1px rgb(0 0 0 / 0.05);
+        }
+
+        .cinematic-shadow {
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15),
+                       0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+
+        .elegant-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .elegant-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.06), 
+                       0 8px 10px -6px rgb(0 0 0 / 0.04);
+        }
+
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #C35E3B;
+        }
+
+        .orange-glow {
+            text-shadow: 0 0 40px rgba(195, 94, 59, 0.18),
+                        0 2px 4px rgba(0, 0, 0, 0.06);
+        }
+
+        .subtle-divider {
+            border-color: #D9D0C2;
+        }
+
+        .portfolio-img {
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .portfolio-card:hover .portfolio-img {
+            transform: scale(1.035);
+        }
+
+        .nav-scrolled {
+            background-color: rgba(245, 240, 230, 0.96);
+            backdrop-filter: blur(12px);
+        }
+
+        .step-number {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .premium-button {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .premium-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 15px -3px rgb(195 94 59 / 0.2),
+                       0 4px 6px -4px rgb(195 94 59 / 0.2);
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .modal {
+            animation: modalPop 0.2s ease-out forwards;
+        }
+
+        @keyframes modalPop {
+            from {
+                opacity: 0;
+                transform: translateY(10px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .line-art {
+            stroke: #C35E3B;
+            stroke-width: 1.75;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+        .hero-bg {
+            background: linear-gradient(180deg, #F5F0E6 0%, #F1EBDE 100%);
+        }
+
+        .refined-text {
+            line-height: 1.65;
+        }
+    </style>
+</head>
+<body class="cream-bg text-[#2F2723] antialiased">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#F5F0E6]/90 backdrop-blur-lg border-b border-[#D9D0C2]/60">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo + Brand -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <path d="M8 38 L24 12 L40 38" class="line-art" stroke="#C35E3B"/>
+                            <path d="M13 38 L24 24 L35 38" class="line-art" stroke="#C35E3B"/>
+                            <path d="M18 38 V28 L24 22 L30 28 V38" class="line-art" stroke="#C35E3B"/>
+                            <rect x="20" y="32" width="8" height="6" class="line-art" stroke="#C35E3B"/>
+                            <!-- Chimney -->
+                            <path d="M30 18 L30 12 L34 12 L34 18" class="line-art" stroke="#C35E3B"/>
+                            <!-- Windows -->
+                            <rect x="15" y="24" width="4" height="4" class="line-art" stroke="#C35E3B"/>
+                            <rect x="29" y="24" width="4" height="4" class="line-art" stroke="#C35E3B"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-semibold tracking-tighter text-xl" style="font-family: 'Playfair Display', Georgia, serif;">Davis</span>
+                        <span class="font-light tracking-[1.5px] text-lg ml-0.5 text-[#C35E3B]">Restoration</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-x-10 text-sm font-medium tracking-wide">
+                    <a href="#about" class="nav-link text-[#2F2723]/80 hover:text-[#C35E3B]">Our Atelier</a>
+                    <a href="#services" class="nav-link text-[#2F2723]/80 hover:text-[#C35E3B]">Services</a>
+                    <a href="#portfolio" class="nav-link text-[#2F2723]/80 hover:text-[#C35E3B]">Work</a>
+                    <a href="#process" class="nav-link text-[#2F2723]/80 hover:text-[#C35E3B]">Process</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="#contact" 
+                       class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold tracking-wider rounded-full border border-[#C35E3B] text-[#C35E3B] hover:bg-[#C35E3B] hover:text-white transition-all duration-200">
+                        REQUEST CONSULTATION
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button"
+                        class="md:hidden w-10 h-10 flex items-center justify-center text-[#2F2723]"
+                        aria-label="Toggle menu">
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-[#D9D0C2]/70 bg-[#F5F0E6]">
+            <div class="px-8 py-8 flex flex-col gap-y-5 text-base font-medium">
+                <a href="#about" class="mobile-nav-link py-1">Our Atelier</a>
+                <a href="#services" class="mobile-nav-link py-1">Services</a>
+                <a href="#portfolio" class="mobile-nav-link py-1">Work</a>
+                <a href="#process" class="mobile-nav-link py-1">Process</a>
+                <div class="pt-4 border-t border-[#D9D0C2]/60">
+                    <a href="#contact" 
+                       class="mobile-nav-link inline-block w-full text-center py-3.5 rounded-full border border-[#C35E3B] text-[#C35E3B] font-semibold tracking-wider">
+                        REQUEST CONSULTATION
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-[100dvh] pt-20 flex items-center relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-8 pt-12 pb-16 md:pt-8 md:pb-24">
+            <div class="max-w-4xl mx-auto text-center">
+                
+                <!-- Logo -->
+                <div class="flex justify-center mb-8 md:mb-9">
+                    <div class="w-20 h-20 md:w-24 md:h-24 p-3 bg-white/70 rounded-2xl shadow-sm border border-[#D9D0C2]/60">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <!-- Main roof -->
+                            <path d="M6 36 L24 10 L42 36" class="line-art" stroke="#C35E3B"/>
+                            <!-- Lower roof -->
+                            <path d="M11 36 L24 22 L37 36" class="line-art" stroke="#C35E3B"/>
+                            <!-- Porch columns -->
+                            <path d="M14 36 V25 M34 36 V25" class="line-art" stroke="#C35E3B"/>
+                            <!-- Porch roof -->
+                            <path d="M11 25 L24 19 L37 25" class="line-art" stroke="#C35E3B"/>
+                            <!-- Main body -->
+                            <path d="M11 36 V25 H37 V36" class="line-art" stroke="#C35E3B"/>
+                            <!-- Door -->
+                            <path d="M21 36 V28 H27 V36" class="line-art" stroke="#C35E3B"/>
+                            <!-- Windows -->
+                            <rect x="13" y="26" width="4.5" height="4.5" class="line-art" stroke="#C35E3B"/>
+                            <rect x="30.5" y="26" width="4.5" height="4.5" class="line-art" stroke="#C35E3B"/>
+                            <!-- Chimney -->
+                            <path d="M32 17 V12 H37 V17" class="line-art" stroke="#C35E3B"/>
+                            <path d="M33.5 12 L33.5 9.5" class="line-art" stroke="#C35E3B"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="heading-serif text-6xl md:text-7xl lg:text-[82px] leading-[0.92] tracking-tighter warm-orange orange-glow mb-5">
+                    Davis Restoration
+                </h1>
+
+                <!-- Tagline -->
+                <p class="max-w-lg mx-auto text-xl md:text-2xl text-[#2F2723]/75 tracking-tight mb-10">
+                    Preserving the art of fine furniture.
+                </p>
+
+                <!-- CTAs -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#portfolio" 
+                       class="premium-button w-full sm:w-auto inline-flex items-center justify-center px-9 py-[17px] text-sm font-semibold tracking-[1px] bg-[#C35E3B] text-white rounded-full hover:bg-[#A84C2E]">
+                        VIEW OUR WORK
+                    </a>
+                    <a href="#contact" 
+                       class="premium-button w-full sm:w-auto inline-flex items-center justify-center px-9 py-[17px] text-sm font-semibold tracking-[1px] border border-[#C35E3B]/90 text-[#C35E3B] rounded-full hover:bg-white/70">
+                        REQUEST A CONSULTATION
+                    </a>
+                </div>
+
+                <div class="mt-12 md:mt-16 flex justify-center">
+                    <div class="flex items-center gap-x-2 text-xs tracking-[1.5px] text-[#2F2723]/50">
+                        <div class="h-px w-6 bg-[#C35E3B]/30"></div>
+                        <span>ESTABLISHED 2026 • RICHMOND, VIRGINIA</span>
+                        <div class="h-px w-6 bg-[#C35E3B]/30"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subtle bottom fade -->
+        <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#F5F0E6] to-transparent pointer-events-none"></div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="border-b border-[#D9D0C2]/70 bg-white/40">
+        <div class="max-w-6xl mx-auto px-8">
+            <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-3 py-5 text-xs tracking-[1px] text-[#2F2723]/50 font-medium">
+                <div>PRIVATE COLLECTORS</div>
+                <div class="hidden sm:block w-px h-3 bg-[#D9D0C2]"></div>
+                <div>MUSEUMS &amp; HISTORIC HOMES</div>
+                <div class="hidden sm:block w-px h-3 bg-[#D9D0C2]"></div>
+                <div>FINE AUCTION HOUSES</div>
+                <div class="hidden sm:block w-px h-3 bg-[#D9D0C2]"></div>
+                <div>FAMILY HEIRLOOMS</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="max-w-5xl mx-auto px-8 pt-20 pb-16 md:pt-24 md:pb-20">
+        <div class="grid md:grid-cols-12 gap-x-12 gap-y-10 items-center">
+            <div class="md:col-span-7">
+                <div class="uppercase tracking-[2px] text-xs font-medium text-[#C35E3B] mb-3">Our Heritage</div>
+                <h2 class="section-header text-5xl md:text-[54px] leading-[0.96] tracking-tighter mb-8">
+                    A legacy of<br>quiet craftsmanship.
+                </h2>
+                
+                <div class="refined-text text-[15px] leading-relaxed text-[#2F2723]/80 space-y-5 max-w-[44ch]">
+                    <p>Founded in 2026 by Emily Davis, Davis Restoration gives Virginia’s most treasured heritage furniture a new life. We specialize in pieces that carry the quiet accents of a time past—the subtle wear, rich patina, and stories only the years can leave behind.</p>
+                    <p>Every heirloom that enters the studio is renewed with care so it can be used and loved today, while every mark of its history is protected. The result is furniture that feels both timeless and freshly alive.</p>
+                </div>
+            </div>
+
+            <div class="md:col-span-5">
+                <div class="soft-cream rounded-3xl p-9 md:p-10 premium-shadow">
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <div class="stat-number text-5xl font-bold warm-orange tracking-tighter">2026</div>
+                            <div class="mt-1 text-sm tracking-wide text-[#2F2723]/60">Founded in<br>Richmond, Virginia</div>
+                        </div>
+                        <div>
+                            <div class="stat-number text-5xl font-bold warm-orange tracking-tighter">85</div>
+                            <div class="mt-1 text-sm tracking-wide text-[#2F2723]/60">Heirlooms<br>restored since opening</div>
+                        </div>
+                        <div>
+                            <div class="stat-number text-5xl font-bold warm-orange tracking-tighter">4</div>
+                            <div class="mt-1 text-sm tracking-wide text-[#2F2723]/60">Generations of<br>craftsmen in family</div>
+                        </div>
+                        <div>
+                            <div class="stat-number text-5xl font-bold warm-orange tracking-tighter">12</div>
+                            <div class="mt-1 text-sm tracking-wide text-[#2F2723]/60">States represented<br>by our clients</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="border-t border-[#D9D0C2]/70 bg-white/30">
+        <div class="max-w-6xl mx-auto px-8 py-20 md:py-24">
+            <div class="flex flex-col items-center text-center mb-14">
+                <div class="uppercase text-[#C35E3B] tracking-[2.5px] text-xs font-medium mb-3">What We Offer</div>
+                <h2 class="section-header text-5xl md:text-[52px] leading-none tracking-tighter">Services</h2>
+                <p class="mt-4 max-w-md text-[#2F2723]/70 text-[15px]">Each service is performed with the reverence and technical mastery that fine furniture demands.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Service 1 -->
+                <div class="elegant-card group bg-white border border-[#D9D0C2]/70 rounded-3xl px-8 py-9">
+                    <div class="w-9 h-9 mb-6 text-[#C35E3B]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-xl tracking-tight mb-3">Antique &amp; Period Restoration</h3>
+                    <p class="text-[#2F2723]/70 leading-relaxed text-[15px]">Complete conservation and restoration of 18th and 19th century furniture, including Federal, Georgian, Chippendale, and Queen Anne pieces.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="elegant-card group bg-white border border-[#D9D0C2]/70 rounded-3xl px-8 py-9">
+                    <div class="w-9 h-9 mb-6 text-[#C35E3B]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-xl tracking-tight mb-3">Wood Refinishing</h3>
+                    <p class="text-[#2F2723]/70 leading-relaxed text-[15px]">Hand-applied traditional finishes — French polish, oil, wax, and spirit varnish — that reveal the natural depth and grain of the wood.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="elegant-card group bg-white border border-[#D9D0C2]/70 rounded-3xl px-8 py-9">
+                    <div class="w-9 h-9 mb-6 text-[#C35E3B]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.796-.582 1.287-1.376 1.287-2.236 0-1.31-.754-2.083-2.09-2.083-.55 0-1.02.236-1.336.634L12 13.5" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-xl tracking-tight mb-3">Structural Repair &amp; Joinery</h3>
+                    <p class="text-[#2F2723]/70 leading-relaxed text-[15px]">Precise repair of broken tenons, loose joints, warped panels, and damaged casework using traditional and conservation-grade methods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Featured Work -->
+    <section id="portfolio" class="max-w-7xl mx-auto px-8 pt-6 pb-20 md:pt-8 md:pb-24">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-y-4 mb-9">
+            <div>
+                <div class="uppercase tracking-[2px] text-xs font-medium text-[#C35E3B] mb-1.5">Featured Restorations</div>
+                <h2 class="section-header text-5xl md:text-6xl leading-none tracking-tighter">Recent Work</h2>
+            </div>
+            <a href="#contact" class="inline-flex items-center gap-x-2 text-sm font-medium text-[#C35E3B] group">
+                INQUIRE ABOUT A SIMILAR PROJECT 
+                <span class="group-hover:translate-x-0.5 transition">→</span>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Portfolio Item 1 -->
+            <div onclick="showPortfolioModal(0)" class="portfolio-card group cursor-pointer bg-white overflow-hidden rounded-3xl border border-[#D9D0C2]/60 premium-shadow">
+                <div class="aspect-[4/3] overflow-hidden bg-[#EDE7D9]">
+                    <img src="https://picsum.photos/id/133/800/600" alt="Federal period mahogany sideboard" 
+                         class="portfolio-img w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-baseline justify-between">
+                        <div>
+                            <div class="font-semibold tracking-tight text-lg">Federal Mahogany Sideboard</div>
+                            <div class="text-sm text-[#2F2723]/60">c. 1815 • Richmond, VA</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 inline-flex items-center text-xs px-3 py-1 rounded-full bg-[#F5F0E6] text-[#C35E3B] tracking-wider">COMPLETED 2026</div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 2 -->
+            <div onclick="showPortfolioModal(1)" class="portfolio-card group cursor-pointer bg-white overflow-hidden rounded-3xl border border-[#D9D0C2]/60 premium-shadow">
+                <div class="aspect-[4/3] overflow-hidden bg-[#EDE7D9]">
+                    <img src="https://picsum.photos/id/106/800/600" alt="Georgian oak dining table" 
+                         class="portfolio-img w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-baseline justify-between">
+                        <div>
+                            <div class="font-semibold tracking-tight text-lg">Georgian Oak Dining Table</div>
+                            <div class="text-sm text-[#2F2723]/60">c. 1770 • Virginia</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 inline-flex items-center text-xs px-3 py-1 rounded-full bg-[#F5F0E6] text-[#C35E3B] tracking-wider">COMPLETED 2026</div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 3 -->
+            <div onclick="showPortfolioModal(2)" class="portfolio-card group cursor-pointer bg-white overflow-hidden rounded-3xl border border-[#D9D0C2]/60 premium-shadow">
+                <div class="aspect-[4/3] overflow-hidden bg-[#EDE7D9]">
+                    <img src="https://picsum.photos/id/251/800/600" alt="Victorian walnut armoire" 
+                         class="portfolio-img w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-baseline justify-between">
+                        <div>
+                            <div class="font-semibold tracking-tight text-lg">Victorian Walnut Armoire</div>
+                            <div class="text-sm text-[#2F2723]/60">c. 1885 • Virginia</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 inline-flex items-center text-xs px-3 py-1 rounded-full bg-[#F5F0E6] text-[#C35E3B] tracking-wider">COMPLETED 2026</div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 4 -->
+            <div onclick="showPortfolioModal(3)" class="portfolio-card group cursor-pointer bg-white overflow-hidden rounded-3xl border border-[#D9D0C2]/60 premium-shadow">
+                <div class="aspect-[4/3] overflow-hidden bg-[#EDE7D9]">
+                    <img src="https://picsum.photos/id/30/800/600" alt="Queen Anne tea table" 
+                         class="portfolio-img w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-baseline justify-between">
+                        <div>
+                            <div class="font-semibold tracking-tight text-lg">Queen Anne Tea Table</div>
+                            <div class="text-sm text-[#2F2723]/60">c. 1740 • Virginia</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 inline-flex items-center text-xs px-3 py-1 rounded-full bg-[#F5F0E6] text-[#C35E3B] tracking-wider">COMPLETED 2026</div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 5 -->
+            <div onclick="showPortfolioModal(4)" class="portfolio-card group cursor-pointer bg-white overflow-hidden rounded-3xl border border-[#D9D0C2]/60 premium-shadow">
+                <div class="aspect-[4/3] overflow-hidden bg-[#EDE7D9]">
+                    <img src="https://picsum.photos/id/160/800/600" alt="Rosewood Credenza" 
+                         class="portfolio-img w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-baseline justify-between">
+                        <div>
+                            <div class="font-semibold tracking-tight text-lg">Rosewood Credenza</div>
+                            <div class="text-sm text-[#2F2723]/60">c. 1962 • Private Collection</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 inline-flex items-center text-xs px-3 py-1 rounded-full bg-[#F5F0E6] text-[#C35E3B] tracking-wider">COMPLETED 2026</div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 6 -->
+            <div onclick="showPortfolioModal(5)" class="portfolio-card group cursor-pointer bg-white overflow-hidden rounded-3xl border border-[#D9D0C2]/60 premium-shadow">
+                <div class="aspect-[4/3] overflow-hidden bg-[#EDE7D9]">
+                    <img src="https://picsum.photos/id/201/800/600" alt="Chippendale slant-front desk" 
+                         class="portfolio-img w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-baseline justify-between">
+                        <div>
+                            <div class="font-semibold tracking-tight text-lg">Chippendale Slant-Front Desk</div>
+                            <div class="text-sm text-[#2F2723]/60">c. 1765 • Virginia</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 inline-flex items-center text-xs px-3 py-1 rounded-full bg-[#F5F0E6] text-[#C35E3B] tracking-wider">COMPLETED 2026</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="bg-white border-y border-[#D9D0C2]/70">
+        <div class="max-w-6xl mx-auto px-8 py-20 md:py-24">
+            <div class="text-center mb-14">
+                <div class="uppercase tracking-[2px] text-xs font-medium text-[#C35E3B] mb-2">How We Work</div>
+                <h2 class="section-header text-5xl md:text-[52px] leading-none tracking-tighter">The restoration process</h2>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-5 gap-6">
+                    <!-- Step 1 -->
+                    <div class="flex md:block gap-6 md:text-center">
+                        <div class="flex-shrink-0 md:mx-auto">
+                            <div class="step-number w-12 h-12 rounded-2xl flex items-center justify-center text-3xl font-bold border border-[#C35E3B]/20 text-[#C35E3B]">01</div>
+                        </div>
+                        <div class="pt-1 md:pt-5">
+                            <div class="font-semibold text-lg tracking-tight">Consultation</div>
+                            <p class="mt-1 text-sm text-[#2F2723]/70 leading-snug">In-person or detailed photographic assessment. We discuss provenance, condition, and your goals for the piece.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex md:block gap-6 md:text-center">
+                        <div class="flex-shrink-0 md:mx-auto">
+                            <div class="step-number w-12 h-12 rounded-2xl flex items-center justify-center text-3xl font-bold border border-[#C35E3B]/20 text-[#C35E3B]">02</div>
+                        </div>
+                        <div class="pt-1 md:pt-5">
+                            <div class="font-semibold text-lg tracking-tight">Documentation</div>
+                            <p class="mt-1 text-sm text-[#2F2723]/70 leading-snug">Full photographic record and condition report. We identify original construction details and previous repairs.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex md:block gap-6 md:text-center">
+                        <div class="flex-shrink-0 md:mx-auto">
+                            <div class="step-number w-12 h-12 rounded-2xl flex items-center justify-center text-3xl font-bold border border-[#C35E3B]/20 text-[#C35E3B]">03</div>
+                        </div>
+                        <div class="pt-1 md:pt-5">
+                            <div class="font-semibold text-lg tracking-tight">Conservation</div>
+                            <p class="mt-1 text-sm text-[#2F2723]/70 leading-snug">Structural repair using reversible, conservation-grade methods. Damaged elements are stabilized or replaced in-kind.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="flex md:block gap-6 md:text-center">
+                        <div class="flex-shrink-0 md:mx-auto">
+                            <div class="step-number w-12 h-12 rounded-2xl flex items-center justify-center text-3xl font-bold border border-[#C35E3B]/20 text-[#C35E3B]">04</div>
+                        </div>
+                        <div class="pt-1 md:pt-5">
+                            <div class="font-semibold text-lg tracking-tight">Finishing</div>
+                            <p class="mt-1 text-sm text-[#2F2723]/70 leading-snug">Traditional surface restoration — cleaning, color matching, and application of period-appropriate finishes.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 5 -->
+                    <div class="flex md:block gap-6 md:text-center">
+                        <div class="flex-shrink-0 md:mx-auto">
+                            <div class="step-number w-12 h-12 rounded-2xl flex items-center justify-center text-3xl font-bold border border-[#C35E3B]/20 text-[#C35E3B]">05</div>
+                        </div>
+                        <div class="pt-1 md:pt-5">
+                            <div class="font-semibold text-lg tracking-tight">Delivery</div>
+                            <p class="mt-1 text-sm text-[#2F2723]/70 leading-snug">Final inspection, client walkthrough, and careful white-glove delivery with care instructions for long-term preservation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="max-w-6xl mx-auto px-8 py-20 md:py-24">
+        <div class="mb-12">
+            <div class="uppercase tracking-[2px] text-xs font-medium text-[#C35E3B] mb-2">Client Voices</div>
+            <h2 class="section-header text-5xl md:text-[52px] leading-none tracking-tighter">What our clients say</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="soft-cream rounded-3xl p-9 premium-shadow">
+                <div class="text-[#C35E3B] text-4xl leading-none mb-6">“</div>
+                <p class="refined-text text-[15px] leading-relaxed">The sideboard has been in my family for five generations. Davis Restoration returned it to its original beauty while preserving every mark of its history. The care and respect they showed for the piece was extraordinary.</p>
+                <div class="mt-8 flex items-center gap-x-3">
+                    <div class="font-medium">Margaret Langhorne</div>
+                    <div class="text-sm text-[#2F2723]/50">— Richmond, VA</div>
+                </div>
+            </div>
+
+            <div class="soft-cream rounded-3xl p-9 premium-shadow">
+                <div class="text-[#C35E3B] text-4xl leading-none mb-6">“</div>
+                <p class="refined-text text-[15px] leading-relaxed">We entrusted them with a rare Georgian dining table for a historic home project. The result exceeded our expectations. Their attention to detail and understanding of period techniques is unmatched.</p>
+                <div class="mt-8 flex items-center gap-x-3">
+                    <div class="font-medium">Thomas &amp; Eleanor Whitfield</div>
+                    <div class="text-sm text-[#2F2723]/50">— The Preservation Society</div>
+                </div>
+            </div>
+
+            <div class="soft-cream rounded-3xl p-9 premium-shadow">
+                <div class="text-[#C35E3B] text-4xl leading-none mb-6">“</div>
+                <p class="refined-text text-[15px] leading-relaxed">My grandmother’s Chippendale desk was badly damaged in a move. They rebuilt the broken feet and drawer runners invisibly and matched the finish perfectly. It looks like it never left the house.</p>
+                <div class="mt-8 flex items-center gap-x-3">
+                    <div class="font-medium">Henry Caldwell</div>
+                    <div class="text-sm text-[#2F2723]/50">— Richmond, VA</div>
+                </div>
+            </div>
+
+            <div class="soft-cream rounded-3xl p-9 premium-shadow">
+                <div class="text-[#C35E3B] text-4xl leading-none mb-6">“</div>
+                <p class="refined-text text-[15px] leading-relaxed">As a dealer of 18th century furniture, I send my most important pieces to Davis. Their work consistently elevates the value and integrity of every item they touch.</p>
+                <div class="mt-8 flex items-center gap-x-3">
+                    <div class="font-medium">Alexandra Reed</div>
+                    <div class="text-sm text-[#2F2723]/50">— Reed Fine Antiques</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="border-t border-[#D9D0C2]/70 bg-white/40">
+        <div class="max-w-6xl mx-auto px-8 py-20 md:py-24">
+            <div class="grid lg:grid-cols-5 gap-x-12 gap-y-14">
+                
+                <!-- Left Column -->
+                <div class="lg:col-span-2">
+                    <div class="uppercase tracking-[2px] text-xs font-medium text-[#C35E3B] mb-3">Begin Your Restoration</div>
+                    <h2 class="section-header text-5xl md:text-[52px] leading-[0.96] tracking-tighter mb-6">Let’s discuss<br>your piece.</h2>
+                    
+                    <div class="space-y-8 text-[15px]">
+                        <div>
+                            <div class="font-medium tracking-wide text-sm mb-1 text-[#2F2723]/70">THE STUDIO</div>
+                            <div class="leading-tight">1425 Heritage Lane<br>Richmond, Virginia 23220</div>
+                        </div>
+                        <div>
+                            <div class="font-medium tracking-wide text-sm mb-1 text-[#2F2723]/70">CONTACT</div>
+                            <a href="tel:8045550192" class="block hover:text-[#C35E3B] transition-colors">(804) 555-0192</a>
+                            <a href="mailto:studio@davisrestoration.com" class="block hover:text-[#C35E3B] transition-colors">studio@davisrestoration.com</a>
+                        </div>
+                        <div>
+                            <div class="font-medium tracking-wide text-sm mb-1 text-[#2F2723]/70">HOURS</div>
+                            <div class="leading-tight text-[#2F2723]/80">Tuesday – Friday, 9am – 4pm<br>By appointment only</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="lg:col-span-3">
+                    <form id="consultation-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs tracking-wider font-medium text-[#2F2723]/70 mb-1.5">NAME</label>
+                                <input type="text" id="name" required
+                                       class="w-full bg-white border border-[#D9D0C2] rounded-2xl px-5 py-3.5 text-sm focus:outline-none focus:border-[#C35E3B]/70 placeholder:text-[#2F2723]/40">
+                            </div>
+                            <div>
+                                <label class="block text-xs tracking-wider font-medium text-[#2F2723]/70 mb-1.5">EMAIL</label>
+                                <input type="email" id="email" required
+                                       class="w-full bg-white border border-[#D9D0C2] rounded-2xl px-5 py-3.5 text-sm focus:outline-none focus:border-[#C35E3B]/70 placeholder:text-[#2F2723]/40">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs tracking-wider font-medium text-[#2F2723]/70 mb-1.5">PHONE</label>
+                                <input type="tel" id="phone"
+                                       class="w-full bg-white border border-[#D9D0C2] rounded-2xl px-5 py-3.5 text-sm focus:outline-none focus:border-[#C35E3B]/70 placeholder:text-[#2F2723]/40">
+                            </div>
+                            <div>
+                                <label class="block text-xs tracking-wider font-medium text-[#2F2723]/70 mb-1.5">TYPE OF PIECE</label>
+                                <select id="piece-type"
+                                        class="w-full bg-white border border-[#D9D0C2] rounded-2xl px-5 py-[15px] text-sm focus:outline-none focus:border-[#C35E3B]/70">
+                                    <option value="">Select category...</option>
+                                    <option value="Case Furniture">Case Furniture (chests, sideboards, desks)</option>
+                                    <option value="Tables">Tables &amp; Dining</option>
+                                    <option value="Seating">Seating (chairs, settees)</option>
+                                    <option value="Storage">Cabinets &amp; Armoires</option>
+                                    <option value="Other">Other / Specialty</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs tracking-wider font-medium text-[#2F2723]/70 mb-1.5">TELL US ABOUT THE PIECE</label>
+                            <textarea id="message" rows="4" required placeholder="Approximate age, current condition, any known history or damage..."
+                                      class="w-full resize-y bg-white border border-[#D9D0C2] rounded-3xl px-5 py-4 text-sm focus:outline-none focus:border-[#C35E3B]/70 placeholder:text-[#2F2723]/40"></textarea>
+                        </div>
+
+                        <button type="submit"
+                                class="premium-button mt-2 w-full sm:w-auto inline-flex items-center justify-center gap-x-2 bg-[#C35E3B] hover:bg-[#A84C2E] transition-colors text-white px-10 py-4 rounded-2xl text-sm font-semibold tracking-wider">
+                            SUBMIT CONSULTATION REQUEST
+                        </button>
+                        <p class="text-xs text-[#2F2723]/50 mt-1.5">We typically respond within two business days.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#D9D0C2]/70 py-8">
+        <div class="max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-y-3 text-xs tracking-wide text-[#2F2723]/60">
+            <div>© <span id="current-year"></span> Davis Restoration. All rights reserved.</div>
+            <div class="flex gap-x-5">
+                <span>Privacy</span>
+                <span>Conservation Philosophy</span>
+                <span>Instagram</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolio-modal" onclick="hidePortfolioModal()" class="hidden fixed inset-0 z-[80] bg-black/70 flex items-center justify-center p-4 md:p-8">
+        <div onclick="event.stopImmediatePropagation()" class="modal max-w-4xl w-full bg-[#F5F0E6] rounded-3xl overflow-hidden shadow-2xl">
+            <div class="relative">
+                <button onclick="hidePortfolioModal()" 
+                        class="absolute top-5 right-5 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-white/90 hover:bg-white text-[#2F2723] transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6h12v12" />
+                    </svg>
+                </button>
+                
+                <div id="modal-image-container" class="aspect-video md:aspect-[16/9.5] bg-[#EDE7D9]">
+                    <!-- Image injected via JS -->
+                </div>
+                
+                <div class="p-8 md:p-10">
+                    <div id="modal-meta" class="flex items-center gap-3 mb-2"></div>
+                    <h3 id="modal-title" class="section-header text-3xl md:text-[34px] leading-none tracking-tight mb-3"></h3>
+                    <p id="modal-description" class="text-[#2F2723]/75 max-w-prose refined-text"></p>
+                    
+                    <div class="mt-7 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                        <div>
+                            <div class="text-xs text-[#2F2723]/50 tracking-wider">ERA</div>
+                            <div id="modal-era" class="font-medium mt-px"></div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-[#2F2723]/50 tracking-wider">ORIGINAL PROVENANCE</div>
+                            <div id="modal-provenance" class="font-medium mt-px"></div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-[#2F2723]/50 tracking-wider">COMPLETED</div>
+                            <div id="modal-completed" class="font-medium mt-px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" onclick="hideSuccessModal()" class="hidden fixed inset-0 z-[90] bg-black/70 flex items-center justify-center p-6">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-white rounded-3xl max-w-md w-full p-9 text-center">
+            <div class="mx-auto w-14 h-14 rounded-full bg-[#C35E3B]/10 flex items-center justify-center mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#C35E3B]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                </svg>
+            </div>
+            <h3 class="text-2xl tracking-tight font-semibold mb-2">Thank you.</h3>
+            <p class="text-[#2F2723]/75">Your consultation request has been received. A member of our team will contact you within two business days.</p>
+            
+            <button onclick="hideSuccessModal()" 
+                    class="mt-8 w-full py-3.5 rounded-2xl border border-[#C35E3B] text-sm font-semibold tracking-widest text-[#C35E3B]">
+                CLOSE
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind script configuration
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--warm-orange', '#C35E3B');
+            
+            // Optional: Extend colors if needed in future
+            // The CDN version is already loaded. We can dynamically add classes if desired.
+        }
+
+        // Navbar scroll effect
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('nav-scrolled', 'shadow-sm');
+                } else {
+                    navbar.classList.remove('nav-scrolled', 'shadow-sm');
+                }
+            });
+        }
+
+        // Mobile menu
+        function initMobileMenu() {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            button.addEventListener('click', () => {
+                const isHidden = menu.classList.contains('hidden');
+                
+                if (isHidden) {
+                    menu.classList.remove('hidden');
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+                } else {
+                    menu.classList.add('hidden');
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+                }
+            });
+
+            // Close mobile menu when clicking a nav link
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+                });
+            });
+        }
+
+        // Smooth scroll for all anchor links
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        const offset = 80;
+                        const bodyRect = document.body.getBoundingClientRect().top;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition - bodyRect - offset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Portfolio data
+        const portfolioData = [
+            {
+                title: "Federal Mahogany Sideboard",
+                era: "c. 1815",
+                provenance: "Richmond, Virginia",
+                completed: "Spring 2026",
+                description: "This Federal mahogany sideboard carried the quiet beauty of nearly two centuries of use. We renewed its structure and top so it could serve a family once again, while carefully protecting every scratch, faded edge, and rich patina that speaks of its long history. A true heritage piece, made ready for today.",
+                image: "https://picsum.photos/id/133/1200/800",
+                thumb: "https://picsum.photos/id/133/800/600"
+            },
+            {
+                title: "Georgian Oak Dining Table",
+                era: "c. 1770",
+                provenance: "Virginia",
+                completed: "February 2026",
+                description: "The Georgian oak table arrived with the honest marks and deep patina of generations at the table. Splits were stabilized using traditional methods and the surface was revived with hand-rubbed oil. The accents of a time past remain visible and cherished as the piece begins a new chapter of gatherings.",
+                image: "https://picsum.photos/id/106/1200/800",
+                thumb: "https://picsum.photos/id/106/800/600"
+            },
+            {
+                title: "Victorian Walnut Armoire",
+                era: "c. 1885",
+                provenance: "Norfolk, Virginia",
+                completed: "Spring 2026",
+                description: "Time and Virginia humidity had left their gentle signatures across this monumental walnut armoire. We reinforced the case and revived the carved details without erasing the depth that only age creates. The finish honors the original while giving the piece fresh presence for a modern home.",
+                image: "https://picsum.photos/id/251/1200/800",
+                thumb: "https://picsum.photos/id/251/800/600"
+            },
+            {
+                title: "Queen Anne Tea Table",
+                era: "c. 1740",
+                provenance: "Williamsburg, Virginia",
+                completed: "Winter 2026",
+                description: "This rare early Queen Anne tea table had lost much of its surface and one leg over the centuries. We crafted a matching replacement and restored the wood with traditional shellac so the soft, glowing patina of its long life could be enjoyed once more. Heritage, thoughtfully made new.",
+                image: "https://picsum.photos/id/30/1200/800",
+                thumb: "https://picsum.photos/id/30/800/600"
+            },
+            {
+                title: "Rosewood Credenza",
+                era: "c. 1962",
+                provenance: "Private Collection",
+                completed: "Spring 2026",
+                description: "The mid-century rosewood credenza carried the character of decades of daily life. After repairing the veneer and top, we returned the wood to a deep, living luster. The piece retains every accent of its era while feeling perfectly at home in the present.",
+                image: "https://picsum.photos/id/160/1200/800",
+                thumb: "https://picsum.photos/id/160/800/600"
+            },
+            {
+                title: "Chippendale Slant-Front Desk",
+                era: "c. 1765",
+                provenance: "Lexington, Virginia",
+                completed: "January 2026",
+                description: "Modern coatings had hidden the true soul of this Chippendale desk. We removed them to reveal the original surface and protected it with period-appropriate finishes. Every mark of its past remains intact as the desk is brought back to beautiful, useful life for a new owner.",
+                image: "https://picsum.photos/id/201/1200/800",
+                thumb: "https://picsum.photos/id/201/800/600"
+            }
+        ];
+
+        // Show portfolio modal
+        function showPortfolioModal(index) {
+            const data = portfolioData[index];
+            const modal = document.getElementById('portfolio-modal');
+            const container = document.getElementById('modal-image-container');
+            
+            // Inject image
+            container.innerHTML = `
+                <img src="${data.image}" alt="${data.title}" 
+                     class="w-full h-full object-cover">
+            `;
+            
+            // Populate text
+            document.getElementById('modal-title').textContent = data.title;
+            document.getElementById('modal-description').textContent = data.description;
+            document.getElementById('modal-era').textContent = data.era;
+            document.getElementById('modal-provenance').textContent = data.provenance;
+            document.getElementById('modal-completed').textContent = data.completed;
+            
+            // Meta badge
+            const meta = document.getElementById('modal-meta');
+            meta.innerHTML = `<span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium bg-white border border-[#D9D0C2]/70 tracking-wider">BEFORE &amp; AFTER AVAILABLE</span>`;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hidePortfolioModal() {
+            const modal = document.getElementById('portfolio-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Form handling
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            const form = document.getElementById('consultation-form');
+            
+            // Simple validation already handled by HTML5 required attributes.
+            // In a real site this would POST to a backend or service.
+            
+            // Hide form and show success
+            form.reset();
+            hidePortfolioModal(); // in case it's open
+            
+            const successModal = document.getElementById('success-modal');
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideSuccessModal() {
+            const modal = document.getElementById('success-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Set current year in footer
+        function setCurrentYear() {
+            const yearEl = document.getElementById('current-year');
+            yearEl.textContent = new Date().getFullYear();
+        }
+
+        // Keyboard escape support
+        function initKeyboardControls() {
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    const portfolioModal = document.getElementById('portfolio-modal');
+                    const successModal = document.getElementById('success-modal');
+                    
+                    if (!portfolioModal.classList.contains('hidden') && portfolioModal.classList.contains('flex')) {
+                        hidePortfolioModal();
+                    } else if (!successModal.classList.contains('hidden') && successModal.classList.contains('flex')) {
+                        hideSuccessModal();
+                    }
+                }
+            });
+        }
+
+        // Initialize everything
+        function initializeWebsite() {
+            initializeTailwind();
+            initNavbar();
+            initMobileMenu();
+            initSmoothScroll();
+            setCurrentYear();
+            initKeyboardControls();
+            
+            // Optional: Preload a couple of portfolio images for faster modal experience
+            portfolioData.forEach((item, i) => {
+                if (i < 3) {
+                    const img = new Image();
+                    img.src = item.image;
+                }
+            });
+            
+            // Make sure mobile menu closes if user resizes to desktop
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    const menu = document.getElementById('mobile-menu');
+                    const icon = document.getElementById('menu-icon');
+                    menu.classList.add('hidden');
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+                }
+            });
+
+            // Accessibility: allow clicking outside portfolio images in cards if needed (already handled by onclick)
+            console.log('%c[Davis Restoration] Premium modern farmhouse website initialized.', 'color:#8D7663');
+        }
+
+        // Boot the site
+        window.onload = initializeWebsite;
+    </script>
+</body>
+</html>
